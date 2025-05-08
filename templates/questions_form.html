@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Survey</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .survey-header {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .form-container {
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .btn-custom {
+            width: 200px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Feedback System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/feedback">Give Feedback</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/questions">Answer Survey</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/manage">Manage Data</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin">Admin</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Customer Survey Content -->
+    <div class="container mt-5">
+        <div class="survey-header">
+            <h2>Customer Survey</h2>
+            <p>We value your feedback. Please answer the following questions.</p>
+        </div>
+
+        <!-- Survey Form Section -->
+        <div class="form-container">
+            <form action="/questions" method="POST">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input id="name" name="name" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input id="email" name="email" class="form-control" type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="q1" class="form-label">How was your experience?</label>
+                    <input id="q1" name="q1" class="form-control" placeholder="Good/Bad/etc." required>
+                </div>
+                <div class="mb-3">
+                    <label for="q2" class="form-label">Was your issue resolved?</label>
+                    <input id="q2" name="q2" class="form-control" placeholder="Yes/No" required>
+                </div>
+                <div class="mb-3">
+                    <label for="q3" class="form-label">Suggestions</label>
+                    <textarea id="q3" name="q3" class="form-control" placeholder="Your suggestions..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-success btn-custom">Submit Survey</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

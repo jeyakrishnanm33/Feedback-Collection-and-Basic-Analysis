@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Feedback System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .dashboard-header {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .stats-card {
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .card-title {
+            font-size: 1.5rem;
+            color: #007bff;
+        }
+        .btn-custom {
+            width: 200px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Feedback System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/feedback">Give Feedback</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/questions">Answer Survey</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/manage">Manage Data</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin">Admin</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <div class="container mt-5">
+        <div class="dashboard-header">
+            <h2>Welcome to the Feedback Dashboard</h2>
+            <p>Your feedback helps us improve!</p>
+        </div>
+
+
+        <!-- Action Buttons Section -->
+        <div class="text-center mt-4">
+            <a href="/feedback" class="btn btn-primary btn-custom">Give Feedback</a>
+            <a href="/questions" class="btn btn-info btn-custom">Answer Survey</a>
+            <a href="/manage" class="btn btn-warning btn-custom">Manage Data</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
